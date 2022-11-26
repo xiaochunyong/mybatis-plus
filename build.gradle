@@ -2,31 +2,32 @@ import java.time.LocalDateTime
 
 allprojects {
     group = 'com.baomidou'
-    version = "3.5.2.6-SNAPSHOT"
+    version = "3.6.0.0-SNAPSHOT"
 }
 
 ext {
     configuration = [
-        javaVersion = JavaVersion.VERSION_1_8
+        javaVersion = JavaVersion.VERSION_17
     ]
 
     libraries = [
-        mybatisVersion = '3.5.10',
-        mybatisSpringVersion = '2.0.7',
-        mybatisSpringBootStarterVersion = '2.2.2',
-        springVersion = '5.3.15',
-        springBootVersion = '2.5.3',
+        mybatisVersion = '3.5.11',
+        mybatisSpringVersion = '3.0.0',
+        mybatisSpringBootStarterVersion = '3.0.0',
+        springVersion = '6.0.2',
+        springBootVersion = '3.0.0',
         jsqlparserVersion = '4.4', // 4.5 有bug
         junitVersion = '5.9.0',
+        kotlinVersion= '1.7.21'
     ]
 
     lib = [
-        "kotlin-reflect"             : "org.jetbrains.kotlin:kotlin-reflect:1.7.10",
-        "kotlin-stdlib-jdk8"         : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10",
+        "kotlin-reflect"             : "org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}",
+        "kotlin-stdlib-jdk8"         : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}",
         "jsqlparser"                 : "com.github.jsqlparser:jsqlparser:${jsqlparserVersion}",
         "mybatis"                    : "org.mybatis:mybatis:${mybatisVersion}",
         "mybatis-spring"             : "org.mybatis:mybatis-spring:${mybatisSpringVersion}",
-        "mybatis-thymeleaf"          : "org.mybatis.scripting:mybatis-thymeleaf:1.0.3",
+        "mybatis-thymeleaf"          : "org.mybatis.scripting:mybatis-thymeleaf:1.0.4",
         "mybatis-freemarker"         : "org.mybatis.scripting:mybatis-freemarker:1.2.3",
         "mybatis-velocity"           : "org.mybatis.scripting:mybatis-velocity:2.1.1",
         "spring-context-support"     : "org.springframework:spring-context-support:${springVersion}",
@@ -37,11 +38,11 @@ ext {
         "aspectjrt"                  : "org.aspectj:aspectjrt:1.9.9.1",
         "cglib"                      : "cglib:cglib:3.3.0",
         "imadcn"                     : "com.imadcn.framework:idworker:1.5.0",
-        "spring-cloud-commons"       : "org.springframework.cloud:spring-cloud-commons:3.0.3",
+        "spring-cloud-commons"       : "org.springframework.cloud:spring-cloud-commons:4.0.0-RC2",
 
         "javax.servlet-api"          : "javax.servlet:javax.servlet-api:4.0.1",
         "aspectjweaver"              : "org.aspectj:aspectjweaver:1.9.9.1",
-        "slf4j-api"                  : "org.slf4j:slf4j-api:1.7.36",
+        "slf4j-api"                  : "org.slf4j:slf4j-api:2.0.4",
         "logback-classic"            : "ch.qos.logback:logback-classic:1.2.11",
         //copy
         "mybatis-spring-boot-starter": "org.mybatis.spring.boot:mybatis-spring-boot-starter:${mybatisSpringBootStarterVersion}",
@@ -50,7 +51,7 @@ ext {
         "assertj-core"               : "org.assertj:assertj-core:3.23.1",
         "junit-jupiter"              : "org.junit.jupiter:junit-jupiter:${junitVersion}",
         "fastjson"                   : "com.alibaba:fastjson:2.0.11",
-        "jackson"                    : "com.fasterxml.jackson.core:jackson-databind:2.13.3",
+        "jackson"                    : "com.fasterxml.jackson.core:jackson-databind:2.14.1",
         "gson"                       : "com.google.code.gson:gson:2.9.1",
         "lagarto"                    : "org.jodd:jodd-lagarto:6.0.6",
         //datasource
@@ -65,9 +66,9 @@ ext {
         "sqlite"                     : "org.xerial:sqlite-jdbc:3.39.2.0",
         "firebird"                   : "org.firebirdsql.jdbc:jaybird:4.0.6.java8",
         //cache
-        "mybatis-ehcache"            : "org.mybatis.caches:mybatis-ehcache:1.2.1",
+        "mybatis-ehcache"            : "org.mybatis.caches:mybatis-ehcache:1.2.3",
         "mybatis-redis"              : "org.mybatis.caches:mybatis-redis:1.0.0-beta2",
-        "mybatis-caffeine"           : "org.mybatis.caches:mybatis-caffeine:1.0.0"
+        "mybatis-caffeine"           : "org.mybatis.caches:mybatis-caffeine:1.1.0"
     ]
 }
 
